@@ -65,7 +65,7 @@ btnvai.addEventListener("click", function() {
     gioco (numero,numeroCPU,scegli)
 })
 
-document.addEventListener('keypress', function(e) {
-    console.log(e.key);
-});
+// document.addEventListener('keypress', function(e) {
+//     console.log(e.key);
+// });
 
