@@ -4,9 +4,8 @@ let scegli ;
 let sceltanumero = document.getElementById("numero");
 let numeroCPU ;
 
-sceltanumero.addEventListener("change", function() {
-    numero = parseInt(document.getElementById("numero").value)
-    console.log(numero)
+function test (numero) {
+    
     if (numero > 5) {
         alert ("ti avevo detto non piu di 5!!" + " " + numero + " " + "è" + " " + (numero - 5) + " " +"in più di 5...")
         document.getElementById("numero").value = 5
@@ -17,12 +16,21 @@ sceltanumero.addEventListener("change", function() {
     } else if (numero <= -273) {
         alert ("siamo oltre lo 0 assoluto,ATTENTEZIONE GLI ATOMI SI SFALDANO...ADIOS!")
         document.getElementById("numero").value = 1
-
     }
     else if (numero < 1) {
         alert ("esagerato"+ " " + numero + "! fa freddo sotto lo 0?")
         document.getElementById("numero").value = 1
-    }    
+    }  
+}
+
+sceltanumero.addEventListener("change", function() {
+
+    numero = parseInt(document.getElementById("numero").value)
+    console.log(numero)
+
+    test(numero);
+
+  
 })
 
 
