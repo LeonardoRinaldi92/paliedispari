@@ -14,7 +14,7 @@ function confermaNumero (numero) {
         alert ("ho capito che tra 1 e 5 è nosioso... ma 0 è inappropriato!")
         document.getElementById("numero").value = 1
     } else if (numero <= -273) {
-        alert ("siamo oltre lo 0 assoluto,ATTENTEZIONE GLI ATOMI SI SFALDANO...ADIOS!")
+        alert ("siamo" + " " + (-273 - numero)+ " " + "gradi oltre lo 0 assoluto,ATTENTEZIONE GLI ATOMI SI SFALDANO...ADIOS!")
         document.getElementById("numero").value = 1
     }
     else if (numero < 1) {
