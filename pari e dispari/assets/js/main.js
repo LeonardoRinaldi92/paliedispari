@@ -4,6 +4,8 @@ let scegli ;
 let sceltanumero = document.getElementById("numero");
 let numeroCPU ;
 
+
+//funzione conferma numero
 function confermaNumero (numero) {
 
     if (numero > 5) {
@@ -20,14 +22,17 @@ function confermaNumero (numero) {
     else if (numero < 1) {
         alert ("esagerato"+ " " + numero + "! fa freddo sotto lo 0?")
         document.getElementById("numero").value = 1
-    }  
+    }
+      
 }
 
+//funzione numero random 
 function casualNumberCPU (min,max) {
 
     return Math.floor(Math.random(min) * max)+1
 }
 
+//funzione gioco con esito
 function gioco (x,y,scelta) {
 
     let risultato = x + y
@@ -43,17 +48,15 @@ function gioco (x,y,scelta) {
 
 }
 
+//controllo numero inserito + funzione
 sceltanumero.addEventListener("change", function() {
 
     numero = parseInt(document.getElementById("numero").value)
-    confermaNumero(numero);
-  
+    confermaNumero(numero); 
+
 })
 
-
-
-
-
+//gioco effetivo con funzione
 btnvai.addEventListener("click", function() {
 
     numero = parseInt(document.getElementById("numero").value)
