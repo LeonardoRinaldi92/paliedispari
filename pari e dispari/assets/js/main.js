@@ -64,3 +64,8 @@ btnvai.addEventListener("click", function() {
     numeroCPU = casualNumberCPU(1,5)
     gioco (numero,numeroCPU,scegli)
 })
+
+document.addEventListener('keypress', function(e) {
+    console.log(e.key);
+});
+
