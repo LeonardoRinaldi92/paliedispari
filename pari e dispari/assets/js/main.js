@@ -29,7 +29,7 @@ function confermaNumero (numero) {
 //funzione numero random 
 function casualNumberCPU (min,max) {
 
-    return Math.floor(Math.random(min) * max)+1
+    return Math.floor(Math.random() *(max - min + 1))+ min ;
 }
 
 //funzione gioco con esito
@@ -62,6 +62,7 @@ btnvai.addEventListener("click", function() {
     numero = parseInt(document.getElementById("numero").value)
     scegli = document.getElementById("scelta").value
     numeroCPU = casualNumberCPU(1,5)
+    console.log (numeroCPU)
     gioco (numero,numeroCPU,scegli)
 })
 
