@@ -23,7 +23,6 @@ function confermaNumero (numero) {
         alert ("esagerato"+ " " + numero + "! fa freddo sotto lo 0?")
         document.getElementById("numero").value = 1
     }
-      
 }
 
 //funzione numero random 
@@ -59,11 +58,16 @@ sceltanumero.addEventListener("change", function() {
 //gioco effetivo con funzione
 btnvai.addEventListener("click", function() {
 
-    numero = parseInt(document.getElementById("numero").value)
-    scegli = document.getElementById("scelta").value
-    numeroCPU = casualNumberCPU(1,5)
-    console.log (numeroCPU)
-    gioco (numero,numeroCPU,scegli)
+    numero = document.getElementById("numero").value
+    if (numero !== "") {
+        scegli = document.getElementById("scelta").value
+        numeroCPU = casualNumberCPU(1,5)
+        console.log (numeroCPU)
+        gioco (parseInt(numero),numeroCPU,scegli)
+    } else {
+        alert ("CAVOLO SCEGLI ALMENO UN NUMERO!!")
+        document.getElementById("numero").value = 1
+    }
 })
 
 // document.addEventListener('keypress', function(e) {
